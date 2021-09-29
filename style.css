@@ -1,0 +1,32 @@
+* {
+
+box-sizing: border-box;
+font-family: monospace;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rosybrown;
+    height: 100vh;
+    width: 100vw;
+}
+
+#container {
+    background-color: cornsilk;
+    border-radius: 5px;
+    width: 500px;
+    padding: 30px
+}
+
+.btns-grid {
+    margin: 20px;
+}
+
+
+.hide {
+    display: none;
+}

@@ -64,7 +64,7 @@ function startQuiz() {};
 });*/
 
 
-var body = document.body;
+/*var body = document.body;
 var h1El = document.createElement('h1');
 var infoEl = document.createElement('div');
 
@@ -96,4 +96,52 @@ listEl.appendChild(li4);
 li1.setAttribute("style", "color:black; margin:auto; width:50%; text-align:center;");
 li2.setAttribute("style", " color:white; background: #777777; padding: 5px; margin-left: 35px;");
 li3.setAttribute("style", " color:white; background: #888888; padding: 5px; margin-left: 35px;");
-li4.setAttribute("style", " color:white; background: #999999; padding: 5px; margin-left: 35px;");
+li4.setAttribute("style", " color:white; background: #999999; padding: 5px; margin-left: 35px;");*/
+var startBtn = document.getElementById('start-btn')
+var nextBtn = document.getElementById('next-btn')
+var questionsContainer = document.getElementById('questions-container')
+var currentQuestion = 0;
+
+
+
+
+
+//questionsContainer.setAttribute("style", " color:white; background: #777777;")
+startBtn.setAttribute("style", " color:white; background: #777777;")
+nextBtn.setAttribute("style", " color:white; background: #777777;")
+
+
+startBtn.addEventListener('click', startQuiz)
+
+function startQuiz(){
+console.log('it works')
+startBtn.style.display= "none"
+questionsContainer.style.display= "block"
+setNextQuestion()
+}
+//display questions
+function setNextQuestion() {
+    questionsContainer.textContent = myQuestions[currentQuestion].question;
+
+    for(var i= 0; i <myQuestions[currentQuestion].answers.length; i++) {
+        
+    }
+}
+
+function selectAnswer() {
+
+}
+
+
+var myQuestions = [
+    {
+    question: 'What is the current year?',
+    answers: ['1995', '2000', '2021', '2051'],
+    correctAnswer: '2021',
+    },
+    {
+        question: 'What city is the capital of Texas?',
+        answers: ['Austin', 'Dallas', 'Houston', 'Paris'],
+        correctAnswer: 'Austin',
+    },
+];
