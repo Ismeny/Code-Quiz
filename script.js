@@ -97,10 +97,12 @@ li1.setAttribute("style", "color:black; margin:auto; width:50%; text-align:cente
 li2.setAttribute("style", " color:white; background: #777777; padding: 5px; margin-left: 35px;");
 li3.setAttribute("style", " color:white; background: #888888; padding: 5px; margin-left: 35px;");
 li4.setAttribute("style", " color:white; background: #999999; padding: 5px; margin-left: 35px;");*/
-var startBtn = document.getElementById('start-btn')
-var nextBtn = document.getElementById('next-btn')
-var questionsContainer = document.getElementById('questions-container')
+var startBtn = document.getElementById('start-btn');
+var nextBtn = document.getElementById('next-btn');
+var questions = document.getElementById('questions');
+var choices = document.getElementById('choices');
 var currentQuestion = 0;
+var currentAnswer = 0;
 
 
 
@@ -114,18 +116,15 @@ nextBtn.setAttribute("style", " color:white; background: #777777;")
 startBtn.addEventListener('click', startQuiz)
 
 function startQuiz(){
-console.log('it works')
 startBtn.style.display= "none"
-questionsContainer.style.display= "block"
+questions.style.display= "block"
 setNextQuestion()
 }
 //display questions
 function setNextQuestion() {
-    questionsContainer.textContent = myQuestions[currentQuestion].question;
+    questions.textContent = myQuestions[currentQuestion].question;
+    choices.textContent = myQuestions[currentAnswer].answers;
 
-    for(var i= 0; i <myQuestions[currentQuestion].answers.length; i++) {
-        
-    }
 }
 
 function selectAnswer() {
