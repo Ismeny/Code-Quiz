@@ -101,29 +101,45 @@ var startBtn = document.getElementById('start-btn');
 var nextBtn = document.getElementById('next-btn');
 var questions = document.getElementById('questions');
 var choices = document.getElementById('choices');
+var btn1 = document.getElementById('btn1');
+var btn2 = document.getElementById('btn2');
+var btn3 = document.getElementById('btn3');
+var btn4 = document.getElementById('btn4');
 var currentQuestion = 0;
 var currentAnswer = 0;
 
-
-
-
-
-//questionsContainer.setAttribute("style", " color:white; background: #777777;")
-startBtn.setAttribute("style", " color:white; background: #777777;")
-nextBtn.setAttribute("style", " color:white; background: #777777;")
-
-
 startBtn.addEventListener('click', startQuiz)
+
+
+function nextButton(){
+  nextBtn.style.display= "none"
+}
 
 function startQuiz(){
 startBtn.style.display= "none"
 questions.style.display= "block"
+nextBtn.style.display= "block"
+questions.style.display= "block"
+
+
 setNextQuestion()
 }
+
 //display questions
 function setNextQuestion() {
     questions.textContent = myQuestions[currentQuestion].question;
-    choices.textContent = myQuestions[currentAnswer].answers;
+    btn1.textContent = myQuestions[currentAnswer].answers[0];
+    btn2.textContent = myQuestions[currentAnswer].answers[1];
+    btn3.textContent = myQuestions[currentAnswer].answers[2];
+    btn4.textContent = myQuestions[currentAnswer].answers[3];
+   document.body.choices.appendChild(btn1);
+    
+    console.log(btn1)
+    
+    console.log(btn2)
+    console.log(btn3)
+    console.log(btn4)
+  
 
 }
 
@@ -144,3 +160,9 @@ var myQuestions = [
         correctAnswer: 'Austin',
     },
 ];
+
+
+startBtn.setAttribute("style", " color:white; background: #777777;")
+nextBtn.setAttribute("style", " color:white; background: #777777;")
+
+nextButton();
