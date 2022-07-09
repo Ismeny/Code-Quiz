@@ -128,14 +128,14 @@ setNextQuestion()
 //display questions
 function setNextQuestion() {
     questions.textContent = myQuestions[currentQuestion].question;
+    // choices.textContent = myQuestions[currentAnswer].answers;
     btn1.textContent = myQuestions[currentAnswer].answers[0];
     btn2.textContent = myQuestions[currentAnswer].answers[1];
     btn3.textContent = myQuestions[currentAnswer].answers[2];
     btn4.textContent = myQuestions[currentAnswer].answers[3];
-   document.body.choices.appendChild(btn1);
+  //  document.body.choices.btn1.append();
     
     console.log(btn1)
-    
     console.log(btn2)
     console.log(btn3)
     console.log(btn4)
